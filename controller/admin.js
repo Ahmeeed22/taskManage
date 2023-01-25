@@ -20,7 +20,8 @@ exports.getTasks = (req, res, next) => {
         } else {
             res.status(200).json({
                 tasks: result,
-                totalItems: totalItems
+                totalItems: totalItems,
+                status:"success"
             })
         }
     }).catch(err => {
