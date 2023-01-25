@@ -2,6 +2,7 @@ const express = require('express');
 const tasksRoute = require("./routes/admin")
 const authRoute = require("./routes/auth")
 const app = express()
+const cors = require("cors"); //to aviod CROS
 const bodyParser = require("body-parser")
 const DBConcction = require('./util/database').DBConcction
 const multer = require('multer')
@@ -31,6 +32,7 @@ const fileFilter = (req, file, cb) => {
         cb(null, false);
       }
     };
+app.use(cors());
     
     // app.use(bodyParser.urlencoded()); // x-www-form-urlencoded <form>
    // const specs = swaggerJsDoc(options);
