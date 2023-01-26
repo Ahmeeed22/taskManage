@@ -36,7 +36,8 @@ exports.createTask = (req, res, next) => {
     if (!err.isEmpty()) {
         return res.status(400).json({
             massage: "title invalid",
-            errors: err.array()
+            errors: err.array(),
+            errs:err
         })
     }
     const imageUrl = req.file.path;
