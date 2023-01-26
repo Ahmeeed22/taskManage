@@ -7,6 +7,10 @@
     },
     "servers": [
         {
+            "url": "http://localhost:8080",
+            "description": "Local Dev, or from Heroku"
+        },
+        {
             "url": "https://taskcrud.onrender.com",
             "description": "public Dev,  from render"
         }
